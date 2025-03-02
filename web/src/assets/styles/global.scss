@@ -1,0 +1,29 @@
+.card-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.title-line {
+  flex: 1;
+  border-top: 1px solid rgba(var(--v-theme-customTitle), 0.12);
+}
+
+.form-element {
+  margin-bottom: 12px;
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink-animation 0.5s linear infinite;
+}
+
+.blink-slow {
+  animation: blink-animation 1.5s linear infinite;
+}

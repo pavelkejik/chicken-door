@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.2" width="60.86mm" height="99.84mm" viewBox="7456 9866 6086 9984" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+  <defs>
+    <filter id="noiseFilter" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="10.9" numOctaves="3" stitchTiles="stitch" result="noisy" />
+      <feColorMatrix type="saturate" values="0" result="desaturatedNoise"/>
+      <feBlend in="SourceGraphic" in2="desaturatedNoise" mode="multiply"/>
+    </filter>
+
+    <filter id="subtleSparkleFilter" x="0%" y="0%" width="100%" height="100%">
+      <!-- Create speckles -->
+      <feTurbulence type="fractalNoise" baseFrequency="10.10" numOctaves="2" stitchTiles="stitch" result="speckles"/>
+      <!-- Increase contrast to make speckles sparse -->
+      <feComponentTransfer in="speckles" result="sharpSpeckles">
+        <feFuncA type="discrete" tableValues="0 0 1"/>
+      </feComponentTransfer>
+      <!-- Apply color to speckles (white) -->
+
+      <!-- Blend the speckles with the original graphic -->
+      <feBlend in="SourceGraphic" in2="coloredSpeckles" mode="screen"/>
+    </filter>
+
+    <filter id="combinedFilter" x="0%" y="0%" width="100%" height="100%">
+      <!-- Matte rough texture -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noisy" />
+      <feColorMatrix type="saturate" values="0" result="desaturatedNoise"/>
+      <feBlend in="SourceGraphic" in2="desaturatedNoise" mode="multiply" result="matteTexture"/>
+      
+      <!-- Subtle sparkles -->
+      <feTurbulence type="fractalNoise" baseFrequency="10.12" numOctaves="1" stitchTiles="stitch" result="speckles"/>
+      <feComponentTransfer in="speckles" result="sharpSpeckles">
+        <feFuncA type="discrete" tableValues="0 0 1"/>
+      </feComponentTransfer>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0" in="sharpSpeckles" result="coloredSpeckles"/>
+      
+      <!-- Combine matte texture and sparkles -->
+      <feBlend in="matteTexture" in2="coloredSpeckles" mode="screen"/>
+    </filter>
+
+  </defs>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="13539" y="11088" width="3" height="3153"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13540,14239 L 13540,11889 13540,11089"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="13410" y="11888" width="3" height="2036"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13411,11889 L 13411,13922"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="13410" y="14238" width="132" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13411,14239 L 13540,14239"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="13410" y="11888" width="132" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13540,11889 L 13411,11889"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="12370" y="11088" width="1172" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 12371,11089 L 13540,11089"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="7919" y="10810" width="5167" height="9040"/>
+    <path fill="rgb(70,73,116)" stroke="none" d="M 13084,10940 C 13084,10862 13023,10811 12954,10811 L 12954,10811 C 11319,10811 9684,10811 8049,10811 L 8049,10811 C 7973,10811 7920,10869 7920,10940 L 7920,10940 C 7920,13909 7920,16879 7920,19848 L 7920,19848 7920,19848 7920,19848 13084,19848 13084,19848 13084,19848 13084,19848 13084,10940 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13084,10940 C 13084,10862 13023,10811 12954,10811 L 12954,10811 8049,10811 8049,10811 C 7973,10811 7920,10869 7920,10940 L 7920,10940 7920,19848 7920,19848 7920,19848 7920,19848 13084,19848 13084,19848 13084,19848 13084,19848 13084,10940 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="12370" y="11888" width="1043" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13411,11889 L 12371,11889"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="11596" y="13094" width="132" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 11726,13095 L 11597,13095"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9271" y="11088" width="2457" height="2009"/>
+    <path fill="rgb(102,102,102)" stroke="none" d="M 10499,13095 L 9272,13095 9272,11089 11726,11089 11726,13095 10499,13095 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 10499,13095 L 9272,13095 9272,11089 11726,11089 11726,13095 10499,13095 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9141" y="13223" width="2716" height="132"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 9142,13224 L 9272,13353 11726,13353 11855,13224"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="13113" y="12101" width="300" height="7749"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13411,12102 L 13385,12102 13140,12102 13114,12102 13114,19848 13140,19848 13385,19848 13411,19848 13411,13922"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9141" y="9866" width="2716" height="261"/>
+    <path fill="rgb(86,86,86)" stroke="none" d="M 11726,9867 L 11855,9996 11855,9996 11726,10125 11726,10125 9272,10125 C 9228,10082 9185,10039 9142,9996 9185,9953 9228,9910 9272,9867 L 9272,9867 11726,9867 11726,9867 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 11726,9867 L 11855,9996 11855,9996 11726,10125 11726,10125 9272,10125 C 9228,10082 9185,10039 9142,9996 9185,9953 9228,9910 9272,9867 L 9272,9867 11726,9867 11726,9867 Z"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9012" y="9995" width="262" height="1088"/>
+    <path fill="rgb(86,86,86)" stroke="none" d="M 9272,11081 L 9013,11081 9013,11081 9013,10125 9142,9996 9142,9996 9272,10125 9272,10125 9272,11081 9272,11081 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 9272,11081 L 9013,11081 9013,11081 9013,10125 9142,9996 9142,9996 9272,10125 9272,10125 9272,11081 9272,11081 Z"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9271" y="10124" width="2457" height="959"/>
+    <path fill="rgb(102,102,102)" filter="url(#combinedFilter)" stroke="none" d="M 10499,11081 L 9272,11081 9272,10125 11726,10125 11726,11081 10499,11081 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 10499,11081 L 9272,11081 9272,10125 11726,10125 11726,11081 10499,11081 Z"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="11725" y="9995" width="261" height="1088"/>
+    <path fill="rgb(86,86,86)" stroke="none" d="M 11726,11081 L 11984,11081 11984,11081 11984,10125 11984,10125 11855,9996 11855,9996 11726,10125 11726,10125 11726,11081 11726,11081 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 11726,11081 L 11984,11081 11984,11081 11984,10125 11984,10125 11855,9996 11855,9996 11726,10125 11726,10125 11726,11081 11726,11081 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8625" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8626,10203 L 8626,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8496" y="10331" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8497,10332 L 8497,10332 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8625" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8626,10203 L 8626,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8496" y="10331" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8497,10332 L 8497,10332 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8625" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8626,10203 L 8626,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8883" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8884,10203 L 8884,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8883" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8884,10203 L 8884,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8883" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8884,10203 L 8884,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8883" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8884,10203 L 8884,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8883" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8884,10203 L 8884,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8883" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8884,10203 L 8884,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8625" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8626,10203 L 8626,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8625" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8626,10203 L 8626,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8625" y="10202" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8626,10203 L 8626,10203 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8496" y="10331" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8497,10332 L 8497,10332 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8496" y="10331" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8497,10332 L 8497,10332 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8496" y="10331" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8497,10332 L 8497,10332 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8496" y="10873" width="3" height="3"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8497,10874 L 8497,10874 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="11319" y="11253" width="197" height="1544"/>
+    <path fill="rgb(17,17,17)" stroke="none" d="M 11417,12795 L 11320,12795 11320,11254 11514,11254 11514,12795 11417,12795 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 11417,12795 L 11320,12795 11320,11254 11514,11254 11514,12795 11417,12795 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="11337" y="11883" width="158" height="914"/>
+    <path fill="rgb(28,121,127)" stroke="none" d="M 11416,12795 L 11338,12795 11338,11884 11493,11884 11493,12795 11416,12795 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 11416,12795 L 11338,12795 11338,11884 11493,11884 11493,12795 11416,12795 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9483" y="11253" width="197" height="1544"/>
+    <path fill="rgb(17,17,17)" stroke="none" d="M 9581,12795 L 9484,12795 9484,11254 9678,11254 9678,12795 9581,12795 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 9581,12795 L 9484,12795 9484,11254 9678,11254 9678,12795 9581,12795 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9501" y="11883" width="158" height="914"/>
+    <path fill="rgb(28,121,127)" stroke="none" d="M 9580,12795 L 9502,12795 9502,11884 9657,11884 9657,12795 9580,12795 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 9580,12795 L 9502,12795 9502,11884 9657,11884 9657,12795 9580,12795 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9141" y="13094" width="2716" height="261"/>
+    <path fill="rgb(86,86,86)" stroke="none" d="M 11726,13353 L 11855,13224 11855,13224 11726,13095 11726,13095 9272,13095 C 9228,13138 9185,13181 9142,13224 9185,13267 9228,13310 9272,13353 L 9272,13353 11726,13353 11726,13353 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 11726,13353 L 11855,13224 11855,13224 11726,13095 11726,13095 9272,13095 C 9228,13138 9185,13181 9142,13224 9185,13267 9228,13310 9272,13353 L 9272,13353 11726,13353 11726,13353 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="11725" y="11088" width="390" height="2138"/>
+    <path fill="rgb(86,86,86)" stroke="none" d="M 12113,11889 L 12113,11089 12113,11089 11726,11089 11726,11089 11726,13095 11726,13095 11855,13224 11855,13224 11984,13095 11984,13095 11984,11928 11984,11928 12023,11889 12023,11889 12113,11889 12113,11889 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 12113,11889 L 12113,11089 12113,11089 11726,11089 11726,11089 11726,13095 11726,13095 11855,13224 11855,13224 11984,13095 11984,13095 11984,11928 11984,11928 12023,11889 12023,11889 12113,11889 12113,11889 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="12369" y="11088" width="1172" height="803"/>
+    <path fill="rgb(238,238,238)" stroke="none" d="M 12955,11889 L 12370,11889 12370,11089 13539,11089 13539,11889 12955,11889 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 12955,11889 L 12370,11889 12370,11089 13539,11089 13539,11889 12955,11889 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="12112" y="11088" width="390" height="803"/>
+    <path fill="rgb(102,102,102)" stroke="none" d="M 12371,11089 L 12113,11089 12113,11089 12113,11889 12113,11889 12371,11889 12371,11889 12500,11760 12500,11760 12500,11218 12500,11218 12371,11089 12371,11089 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 12371,11089 L 12113,11089 12113,11089 12113,11889 12113,11889 12371,11889 12371,11889 12500,11760 12500,11760 12500,11218 12500,11218 12371,11089 12371,11089 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="13409" y="11888" width="132" height="2353"/>
+    <path fill="rgb(238,238,238)" stroke="none" d="M 13475,14239 L 13410,14239 13410,11889 13539,11889 13539,14239 13475,14239 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13475,14239 L 13410,14239 13410,11889 13539,11889 13539,14239 13475,14239 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="13112" y="12101" width="300" height="7749"/>
+    <path fill="rgb(153,153,153)" stroke="none" d="M 13262,19848 L 13113,19848 13113,12102 13410,12102 13410,19848 13262,19848 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 13262,19848 L 13113,19848 13113,12102 13410,12102 13410,19848 13262,19848 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8884" y="11089" width="390" height="2138"/>
+    <path fill="rgb(86,86,86)" stroke="none" d="M 8885,11890 L 8885,11090 8885,11090 9272,11090 9272,11090 9272,13096 9272,13096 9143,13225 9143,13225 9014,13096 9014,13096 9014,11929 9014,11929 8975,11890 8975,11890 8885,11890 8885,11890 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8885,11890 L 8885,11090 8885,11090 9272,11090 9272,11090 9272,13096 9272,13096 9143,13225 9143,13225 9014,13096 9014,13096 9014,11929 9014,11929 8975,11890 8975,11890 8885,11890 8885,11890 Z"/>
+
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="7456" y="11089" width="1172" height="803"/>
+    <path fill="rgb(238,238,238)" stroke="none" d="M 8042,11890 L 7457,11890 7457,11090 8626,11090 8626,11890 8042,11890 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8042,11890 L 7457,11890 7457,11090 8626,11090 8626,11890 8042,11890 Z"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="8497" y="11089" width="390" height="803"/>
+    <path fill="rgb(102,102,102)" stroke="none" d="M 8627,11090 L 8885,11090 8885,11090 8885,11890 8885,11890 8627,11890 8627,11890 8498,11761 8498,11761 8498,11219 8498,11219 8627,11090 8627,11090 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 8627,11090 L 8885,11090 8885,11090 8885,11890 8885,11890 8627,11890 8627,11890 8498,11761 8498,11761 8498,11219 8498,11219 8627,11090 8627,11090 Z"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="7456" y="11889" width="132" height="2353"/>
+    <path fill="rgb(238,238,238)" stroke="none" d="M 7522,14240 L 7457,14240 7457,11890 7586,11890 7586,14240 7522,14240 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 7522,14240 L 7457,14240 7457,11890 7586,11890 7586,14240 7522,14240 Z"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="7585" y="12101" width="300" height="7749"/>
+    <path fill="rgb(153,153,153)" stroke="none" d="M 7735,19848 L 7586,19848 7586,12102 7883,12102 7883,19848 7735,19848 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 7735,19848 L 7586,19848 7586,12102 7883,12102 7883,19848 7735,19848 Z"/>
+
+    <rect class="BoundingBox" stroke="none" fill="none" x="9399" y="12788" width="2200" height="547"/>
+    <path fill="rgb(28,121,127)" stroke="none" d="M 9400,13256 C 9400,13269 9404,13282 9410,13294 9417,13306 9427,13316 9439,13323 9451,13329 9464,13333 9478,13333 9478,13333 9478,13333 9478,13333 L 9478,13333 11520,13333 11520,13333 C 11534,13333 11547,13329 11558,13323 11570,13316 11580,13306 11587,13294 11593,13282 11597,13269 11597,13256 L 11597,13256 11597,12867 11597,12867 C 11597,12853 11593,12840 11587,12828 11580,12816 11570,12806 11558,12799 11547,12793 11534,12789 11520,12789 L 11520,12789 9478,12789 9478,12789 C 9478,12789 9478,12789 9478,12789 9464,12789 9451,12793 9439,12799 9427,12806 9417,12816 9410,12828 9404,12840 9400,12853 9400,12867 L 9400,12867 9400,13256 9400,13256 Z"/>
+    <path fill="none" stroke="rgb(51,51,51)" d="M 9400,13256 C 9400,13269 9404,13282 9410,13294 9417,13306 9427,13316 9439,13323 9451,13329 9464,13333 9478,13333 9478,13333 9478,13333 9478,13333 L 9478,13333 11520,13333 11520,13333 C 11534,13333 11547,13329 11558,13323 11570,13316 11580,13306 11587,13294 11593,13282 11597,13269 11597,13256 L 11597,13256 11597,12867 11597,12867 C 11597,12853 11593,12840 11587,12828 11580,12816 11570,12806 11558,12799 11547,12793 11534,12789 11520,12789 L 11520,12789 9478,12789 9478,12789 C 9478,12789 9478,12789 9478,12789 9464,12789 9451,12793 9439,12799 9427,12806 9417,12816 9410,12828 9404,12840 9400,12853 9400,12867 L 9400,12867 9400,13256 9400,13256 Z"/>
+
+</svg>

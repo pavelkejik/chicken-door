@@ -1,0 +1,139 @@
+<svg  viewBox="5597 18808 10173 3247"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs class="EmbeddedBulletChars">
+  <clipPath id="clip-left">
+    <rect x="5597" y="17848" width="10000" height="5886"/>
+  </clipPath>
+
+            <radialGradient id="color-day-fill" gradientUnits="userSpaceOnUse"  cx="10700" cy="20055" r="3000"
+              xlink:href="#color-day-fill-grad" />
+            <linearGradient id="color-day-fill-grad" gradientUnits="userSpaceOnUse">
+              <stop style="stop-color: rgba(244, 181, 0, 0.763);" offset="0" />
+              <stop style="stop-color: rgba(237, 113, 0, 0.257);" offset="1" />
+            </linearGradient>
+
+            <linearGradient id="color-day-path" gradientUnits="userSpaceOnUse" x1="15700" y1="19655" x2="15700" y2="21555"
+              xlink:href="#color-day-path-grad" />
+            <linearGradient id="color-day-path-grad" gradientUnits="userSpaceOnUse">
+              <stop offset="0" style="stop-color: rgb(255, 224, 0); " />
+              <stop offset="0.86" style="stop-color: rgba(229, 164, 0); " />
+            </linearGradient>
+
+            <radialGradient id="color-night-fill" gradientUnits="userSpaceOnUse"  cx="10700" cy="21055" r="6000"
+              xlink:href="#color-night-fill-grad" />
+            <linearGradient id="color-night-fill-grad" gradientUnits="userSpaceOnUse">
+              <stop style="stop-color: rgba(154, 199, 207, 0.257);" offset="0" />
+<stop style="stop-color: rgba(42, 96, 153, 0.563);" offset="1" />
+            </linearGradient>
+
+            <linearGradient id="color-night-path" gradientUnits="userSpaceOnUse" x1="15700" y1="20655" x2="15700" y2="22555"
+              xlink:href="#color-night-path-grad" />
+            <linearGradient id="color-night-path-grad" gradientUnits="userSpaceOnUse">
+              <title>blue</title>
+              <stop offset="0" style="stop-color: rgb(229, 164, 0);" />
+              <stop offset="0.34" style="stop-color: rgba(26, 50, 247, 0.55);" />
+            </linearGradient>
+
+
+
+  <g id="bullet-char-template-57356" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 580,1141 L 1163,571 580,0 -4,571 580,1141 Z"/>
+  </g>
+  <g id="bullet-char-template-57354" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 8,1128 L 1137,1128 1137,0 8,0 8,1128 Z"/>
+  </g>
+  <g id="bullet-char-template-10146" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 174,0 L 602,739 174,1481 1456,739 174,0 Z M 1358,739 L 309,1346 659,739 1358,739 Z"/>
+  </g>
+  <g id="bullet-char-template-10132" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 2015,739 L 1276,0 717,0 1260,543 174,543 174,936 1260,936 717,1481 1274,1481 2015,739 Z"/>
+  </g>
+  <g id="bullet-char-template-10007" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 0,-2 C -7,14 -16,27 -25,37 L 356,567 C 262,823 215,952 215,954 215,979 228,992 255,992 264,992 276,990 289,987 310,991 331,999 354,1012 L 381,999 492,748 772,1049 836,1024 860,1049 C 881,1039 901,1025 922,1006 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 C 774,196 753,168 711,139 L 727,119 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 C 142,-110 111,-127 72,-127 30,-127 9,-110 8,-76 1,-67 -2,-52 -2,-32 -2,-23 -1,-13 0,-2 Z"/>
+  </g>
+  <g id="bullet-char-template-10004" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 41,549 55,616 82,672 116,743 169,778 240,778 293,778 328,747 346,684 L 369,508 C 377,444 397,411 428,410 L 1163,1116 C 1174,1127 1196,1133 1229,1133 1271,1133 1292,1118 1292,1087 L 1292,965 C 1292,929 1282,901 1262,881 L 442,47 C 390,-6 338,-33 285,-33 Z"/>
+  </g>
+  <g id="bullet-char-template-9679" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 223,773 276,916 383,1023 489,1130 632,1184 813,1184 992,1184 1136,1130 1245,1023 1353,916 1407,772 1407,592 1407,412 1353,268 1245,161 1136,54 992,0 813,0 Z"/>
+  </g>
+  <g id="bullet-char-template-8226" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 346,457 C 273,457 209,483 155,535 101,586 74,649 74,723 74,796 101,859 155,911 209,963 273,989 346,989 419,989 480,963 531,910 582,859 608,796 608,723 608,648 583,586 532,535 482,483 420,457 346,457 Z"/>
+  </g>
+  <g id="bullet-char-template-8211" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M -4,459 L 1135,459 1135,606 -4,606 -4,459 Z"/>
+  </g>
+  <g id="bullet-char-template-61548" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 173,740 C 173,903 231,1043 346,1159 462,1274 601,1332 765,1332 928,1332 1067,1274 1183,1159 1299,1043 1357,903 1357,740 1357,577 1299,437 1183,322 1067,206 928,148 765,148 601,148 462,206 346,322 231,437 173,577 173,740 Z"/>
+  </g>
+
+
+ </defs>
+ <g class="Page">
+
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g id="id7">
+    <rect class="BoundingBox" stroke="none" fill="none" x="7847" y="18848" width="5673" height="1886"/>
+    <g style="opacity: 0.419607843137255">
+     <g>
+
+<g clip-path="url(#clip-left)">
+      <path style="fill:url('#color-day-fill');" d="M 13519,20731 L 13364,20576 13283,20496 13206,20423 13206,20423 13207,20423 12785,20019 12365,19639 12163,19471 12057,19388 11945,19307 11847,19241 11746,19176 11640,19113 11525,19054 11428,19009 11327,18966 11275,18946 11220,18927 11164,18910 11105,18895 11005,18875 10900,18861 10793,18851 10685,18848 10576,18851 10468,18860 10363,18875 10262,18895 10203,18910 10146,18927 10092,18946 10039,18966 9938,19009 9842,19054 9727,19113 9620,19176 9519,19241 9422,19307 9310,19388 9204,19471 9002,19639 8582,20019 8162,20431 8162,20431 7847,20733 7847,20733 13519,20731 Z"/>
+     </g>
+     </g>
+
+    </g>
+   </g>
+  </g>
+
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g id="id8">
+    <rect class="BoundingBox" stroke="none" fill="none" x="5637" y="20733" width="2211" height="1282"/>
+    <g>
+
+<g clip-path="url(#clip-left)">
+     <path style="fill:url('#color-night-fill')" d="M 7847,20733 L 7739,20834 7534,21029 7429,21126 7319,21222 7117,21387 7011,21468 6899,21547 6801,21613 6700,21678 6593,21741 6479,21800 6383,21845 6281,21887 6174,21925 6118,21942 6059,21958 6009,21969 5958,21977 5852,21991 5637,22014 5637,22014 5637,20733 5641,20733 7847,20733 Z"/>
+</g>
+    </g>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g id="id9">
+    <rect class="BoundingBox" stroke="none" fill="none" x="13541" y="20732" width="2211" height="1282"/>
+    <g>
+<g clip-path="url(#clip-left)">
+     <path style="fill:url('#color-night-fill')" d="M 13541,20732 L 13649,20833 13855,21028 13960,21125 14069,21221 14271,21386 14377,21467 14489,21546 14587,21612 14688,21677 14795,21740 14909,21799 15005,21844 15107,21886 15214,21924 15270,21941 15329,21957 15379,21968 15430,21976 15536,21990 15751,22013 15751,22013 15751,20732 15747,20732 13541,20732 Z"/>
+    </g>
+    </g>
+
+   </g>
+  </g>
+ </g>
+
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g id="id3">
+    <rect class="BoundingBox" stroke="none" fill="none" x="13479" y="20691" width="2291" height="1363"/>
+    <path fill="none" stroke="url('#color-night-path')" stroke-width="80" stroke-linejoin="round" d="M 15729,22013 C 15588,21995 15437,21989 15307,21958 15148,21919 15013,21859 14887,21799 14727,21723 14596,21635 14466,21546 14313,21442 14177,21332 14046,21222 13896,21095 13763,20964 13626,20834 13581,20787 13565,20776 13519,20731"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g id="id4">
+    <rect class="BoundingBox" stroke="none" fill="none" x="7807" y="18808" width="5753" height="1966"/>
+    <path fill="none" stroke="url('#color-day-path')"   stroke-width="80" stroke-linejoin="round" d="M 13519,20731 C 13425,20639 13303,20512 13206,20423 L 13206,20423 13207,20423 C 13067,20288 12928,20153 12785,20019 12648,19892 12512,19764 12365,19639 12231,19527 12099,19413 11945,19307 11816,19219 11684,19130 11525,19054 11398,18994 11265,18933 11105,18895 10975,18866 10829,18848 10685,18848 10540,18848 10392,18865 10262,18895 10101,18932 9968,18994 9842,19054 9682,19130 9550,19219 9422,19307 9268,19413 9135,19527 9002,19639 8855,19764 8718,19891 8582,20019 8437,20155 8304,20294 8162,20431 L 8162,20431 C 8068,20519 7944,20641 7847,20733"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g id="id5">
+    <rect class="BoundingBox" stroke="none" fill="none" x="5597" y="20693" width="2291" height="1362"/>
+    <path fill="none" stroke="url('#color-night-path')" stroke-width="80" stroke-linejoin="round" d="M 7847,20733 C 7803,20775 7786,20788 7739,20834 7601,20964 7469,21095 7319,21222 7188,21333 7052,21443 6899,21547 6769,21635 6638,21724 6479,21800 6353,21860 6218,21919 6059,21958 5929,21989 5778,21995 5637,22014"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.LineShape">
+   <g id="id6">
+    <rect class="BoundingBox" stroke="none" fill="none" x="5623" y="20705" width="10143" height="45"/>
+    <path fill="none" stroke="rgb(128, 128, 128)" stroke-opacity="0.7" stroke-width="28" stroke-linejoin="round" d="M 5637,20735 L 15751,20719"/>
+   </g>
+  </g>
+ <path :d="mdiWhiteBalanceSunny" :transform="`translate(${sunPosition.x}, ${sunPosition.y}) scale(30.2)`"
+            fill="orange" />
+
+</svg>

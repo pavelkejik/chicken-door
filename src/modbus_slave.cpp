@@ -7,7 +7,6 @@
  *
  ***********************************************************************/
 
-
 #include "Arduino.h"
 #include "modbus_slave.h"
 #include "parameters.h"
@@ -24,11 +23,9 @@ ModbusExcCodes_t ModbusSlave::BroadcastProc(void)
 	return MB_Exc_IllegalFunction;
 }
 
-
 void ModbusSlave::ErrorProc(ModbusExcCodes_t code)
 {
 }
-
 
 ModbusExcCodes_t ModbusSlave::UnicastProc(void)
 {
@@ -58,7 +55,6 @@ ModbusExcCodes_t ModbusSlave::UnicastProc(void)
 	return exc;
 }
 
-
 ModbusExcCodes_t ModbusSlave::ReadHoldingRegs(void)
 {
 	ModbusExcCodes_t retexc = MB_Exc_IllegalDataValue;
@@ -73,7 +69,7 @@ ModbusExcCodes_t ModbusSlave::ReadHoldingRegs(void)
 		if ((regnmr >= 1) && (regnmr <= ReadHRReqNmrMax))
 		{
 			uint16_t reglast = regadr + regnmr - 1; /*last register going to be written*/
-			Dll.writebPDU(1, 2 * regnmr); /*prepare byte count into response*/
+			Dll.writebPDU(1, 2 * regnmr);			/*prepare byte count into response*/
 			for (uint16_t i = regadr; i <= reglast; i++)
 			{
 				int16_t regval;
@@ -85,7 +81,6 @@ ModbusExcCodes_t ModbusSlave::ReadHoldingRegs(void)
 	}
 	return retexc;
 }
-
 
 ModbusExcCodes_t ModbusSlave::WriteSingleReg(void)
 {
@@ -121,7 +116,6 @@ ModbusExcCodes_t ModbusSlave::WriteSingleReg(void)
 	}
 	return exc;
 }
-
 
 ModbusExcCodes_t ModbusSlave::WriteMultipleRegs()
 {
@@ -206,6 +200,12 @@ void ModbusSlave::Run(void)
 			Dll.writebPDU(0, Dll.readbPDU(0) | ExcFunFlag);
 			Dll.writebPDU(1, exc);
 			Dll.settxlenPDU(2);
+
+			ExceptionError.Set(ExceptionError.Get() + 1);
+		}
+		else
+		{
+			CorrectPackets.Set(CorrectPackets.Get() + 1);
 		}
 		/*start response transmitting*/
 		Dll.sendPDU();
@@ -216,11 +216,17 @@ void ModbusSlave::Run(void)
 		if ((exc != MB_No_Exc))
 		{
 			ErrorProc(exc);
+			ExceptionError.Set(ExceptionError.Get() + 1);
+		}
+		else
+		{
+			CorrectPackets.Set(CorrectPackets.Get() + 1);
 		}
 		Dll.receivePDU();
 		break;
 	case PDUInvalid: /*Corrupted message received*/
 		ErrorProc(MB_No_Exc);
+		ExceptionError.Set(ExceptionError.Get() + 1);
 		break;
 	case PDUIdle: /*idle state*/
 		Dll.receivePDU();

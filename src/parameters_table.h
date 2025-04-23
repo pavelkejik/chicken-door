@@ -91,6 +91,8 @@ DefPar_Fun(CasZatmeni, 51, 0, 0, 6, STRING_, Par_R, Par_Public, FLAGS_NONE, time
 DefPar_Fun(CasVychodu, 54, 0, 0, 6, STRING_, Par_R, Par_Public | Par_MQTT, FLAGS_NONE, time_reg)
 DefPar_Fun(CasZapadu, 57, 0, 0, 6, STRING_, Par_R, Par_Public | Par_MQTT, FLAGS_NONE, time_reg)
 
+
+
 /*
 -----------------------------------------------------------------------------------------------------------
   @ Konfigurace
@@ -268,4 +270,18 @@ DefPar_Ram(FSSize, 1036, 0, 0, 300, U16_, Par_R, Par_Public, FLAGS_NONE)
 DefPar_Ram(FSUsed, 1037, 0, 0, 300, U16_, Par_R, Par_Public, FLAGS_NONE)
 DefPar_Ram(Uptime, 1038, 0, 0, 300, S32_, Par_R, Par_Public, FLAGS_NONE)
 
+
+
+/*
+-----------------------------------------------------------------------------------------------------------
+  @ Debug info
+
+-----------------------------------------------------------------------------------------------------------
+*/
+DefPar_Ram(CRCError, 2000, 0, 0, 1000, U16_, Par_R, Par_Public, FLAGS_NONE)
+DefPar_Ram(TimeoutError, 2001, 0, 0, 1000, U16_, Par_R, Par_Public, FLAGS_NONE)
+DefPar_Ram(ExceptionError, 2002, 0, 0, 1000, U16_, Par_R, Par_Public, FLAGS_NONE)
+DefPar_Ram(CorrectPackets, 2003, 0, 0, 1000, U16_, Par_R, Par_Public, FLAGS_NONE)
+
 #endif /*PAR_DEF_INCLUDES*/
+

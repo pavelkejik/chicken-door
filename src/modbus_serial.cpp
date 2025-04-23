@@ -19,7 +19,7 @@
 #include "pin_map.h"
 #include "driver/uart.h"
 #include "semphr.h"
-
+#include "parameters.h"
 
 HardwareSerial Rs485(RS485_SERIAL_PORT);
 SemaphoreHandle_t  MdbSem = xSemaphoreCreateBinary();
@@ -93,8 +93,8 @@ void frameReceive(void)
 void ModbusSerial::initdll(void)
 {
 	Rs485.setRxBufferSize(MODBUS_BUFFERSIZE);
-	Rs485.begin(RS485_BAUDRATE, SERIAL_8N1, RXD485, TXD485, false, 50);
-	Rs485.setRxTimeout(20);
+	Rs485.begin(RS485_BAUDRATE, SERIAL_8N1, RXD485, TXD485);
+	Rs485.setRxTimeout(2);
 	Rs485.onReceive(frameReceive, true);
 
 	pinMode(DE485, OUTPUT);
@@ -121,6 +121,7 @@ void ModbusSerial::sendPDU(void)
 	BufferOut[len + 1] = crc >> 8;
 	TxEvent = false;
 	digitalWrite(DE485, 1);
+	delayMicroseconds(100); /*wait for DE pin to be stable*/
 	Rs485.write(BufferOut, len + 2);
 
 	State = PDUTransmit;
@@ -185,6 +186,10 @@ PduStatus_t ModbusSerial::getstatus(void)
 				Rs485.flush(false);
 			}
 		}
+		else
+		{
+			TimeoutError.Set(TimeoutError.Get() + 1);
+		}
 		RxEvent = false;
 	}
 
@@ -204,6 +209,7 @@ PduStatus_t ModbusSerial::getstatus(void)
 					retstate = PDUInvalid;
 					TxEvent = false;
 					RxEvent = false;
+					CRCError.Set(CRCError.Get() + 1);
 				}
 			}
 		}

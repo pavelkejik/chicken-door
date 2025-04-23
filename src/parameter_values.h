@@ -10,7 +10,7 @@
 
 #pragma once
 
-#define MAIN_REVISION 23
+#define MAIN_REVISION 24
 
 #define FLAGS_NONE 0
 #define BOOL_FLAG 0x01

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP K7805MT-500R4
+D DC DC CONVERTER +/-5V 4W
+K
+F https://www.mornsun-power.com/public/uploads/pdf/K78_MT-500R4.pdf
+$ENDCMP
+#
+#End Doc Library

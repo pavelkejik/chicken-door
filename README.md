@@ -126,7 +126,7 @@ Replace `<base_topic>` in the Web UI.
 ## Roadmap
 - [ ] Add waterer accessory
 - [ ] Implement chicken presence counting using RFID tags   
-- [ ] Publish 3D-print STLs & KiCad sources
+- [x] Publish 3D-print STLs & KiCad sources
 
 ---
 

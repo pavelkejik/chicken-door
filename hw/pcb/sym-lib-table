@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Dvirka")(type "KiCad")(uri "${KIPRJMOD}/lib/K7805MT-500R4.kicad_sym")(options "")(descr ""))
+  (lib (name "Optosensor")(type "KiCad")(uri "${KIPRJMOD}/lib/TCST1103.kicad_sym")(options "")(descr ""))
+)

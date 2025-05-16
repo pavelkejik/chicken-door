@@ -32,4 +32,16 @@ export const deviceEnums = {
             { value: 2, text: 'Nikdy' },
           ],
     },
+        3: { // EggCamera
+        commandFlags: [
+            { value: 0, text: 'Stop' },
+            { value: 1, text: 'Otevřít' },
+            { value: 2, text: 'Zavřít' },
+          ],
+          stateFlags: [
+            { value: 0, text: 'Automaticky' },
+            { value: 1, text: 'Vždy' },
+            { value: 2, text: 'Nikdy' },
+          ],
+    },
   };

@@ -156,7 +156,7 @@ public:
     Log_t logs[50];
     size_t logCount;
 
-    Device(DeviceType_t deviceType, const uint8_t *macAddr) : deviceType(deviceType), pairState(PAIR_STATE_INITIAL_REQUEST), fwUpdateRequested(false), fwUpdateData(NULL), fwSize(0), fwDataCap(0), locked(false), lastCommunication(0), nextCommunication(0)
+    Device(DeviceType_t deviceType, const uint8_t *macAddr) : deviceType(deviceType), pairState(PAIR_STATE_INITIAL_REQUEST), fwUpdateRequested(false), fwUpdateData(NULL), fwSize(0), fwDataCap(0), locked(false), lastCommunication(0), nextCommunication(0), logCount(0)  
     {
         setMacAddress(macAddr);
         ESPNowCtrl::AddPeer(macAddress, 0);
@@ -251,6 +251,15 @@ public:
     }
 
     virtual void handleByteStream(const ByteStreamPayload *payload);
+};
+
+class EggCameraDevice : public CameraDevice
+{
+public:
+    EggCameraDevice(DeviceType_t deviceType, const uint8_t *macAddr) : CameraDevice(deviceType, macAddr)
+    {
+        deviceName = "Kamera_AI";
+    }
 };
 
 class DeviceManager

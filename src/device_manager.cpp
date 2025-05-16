@@ -669,6 +669,8 @@ Device *DeviceManager::CreateDevice(DeviceType_t deviceType, const uint8_t *macA
         return new FeederDevice(deviceType, macAddr);
     case DEVICE_TYPE_CAMERA:
         return new CameraDevice(deviceType, macAddr);
+    case DEVICE_TYPE_EGG_CAMERA:
+        return new EggCameraDevice(deviceType, macAddr);
     default:
         return new Device(deviceType, macAddr);
     }
@@ -747,6 +749,11 @@ uint32_t DeviceManager::GetDeviceArraySize(size_t id)
             CameraDevice *cam = (CameraDevice *)dev;
             return cam->picture_size;
         }
+        else if(dev->deviceType == DEVICE_TYPE_EGG_CAMERA)
+        {
+            EggCameraDevice *cam = (EggCameraDevice *)dev;
+            return cam->picture_size;
+        }
     }
     return 0;
 }
@@ -760,6 +767,18 @@ size_t DeviceManager::ReadDeviceArrayBytes(size_t id, uint8_t *buf, size_t maxLe
         if (dev->deviceType == DEVICE_TYPE_CAMERA)
         {
             CameraDevice *cam = (CameraDevice *)dev;
+
+            size_t bytesToSend = cam->picture_size - index;
+            if (bytesToSend > maxLen)
+            {
+                bytesToSend = maxLen;
+            }
+            memcpy(buf, cam->picture_buf + index, bytesToSend);
+            return bytesToSend;
+        }
+        else if(dev->deviceType == DEVICE_TYPE_EGG_CAMERA)
+        {
+            EggCameraDevice *cam = (EggCameraDevice *)dev;
 
             size_t bytesToSend = cam->picture_size - index;
             if (bytesToSend > maxLen)

@@ -42,6 +42,20 @@
 
 
         </template>
+        <template v-else-if="device.type == 3">
+          <div v-if="device.pair == '2'" class="image-container">
+            <v-img v-if="device.pair == '2'"
+              :src="`api/get_device_image?id=${index}&timestamp=${cameraTimestamps[index] || Date.now()}`"
+              height="220"></v-img>
+            <!-- Timestamp overlay for each camera -->
+            <!-- <div v-if="cameraTimestamps[index]" class="timestamp-overlay">
+              {{ new Date(cameraTimestamps[index]).toLocaleString() }}
+            </div> -->
+          </div>
+          <v-container v-else class="d-flex justify-center align-center" style="height: 220px;">
+            <v-icon size="120" large color="grey lighten-1">{{ mdiCamera }}</v-icon>
+          </v-container>
+        </template>
 
         <!-- For devices with type != 2, show static image -->
         <v-img v-else src="../assets/feeder.PNG" height="220"></v-img>
@@ -106,7 +120,7 @@
           <div v-else>
             <v-icon size="32" :color="selectedDevice.on ? 'green' : 'red'" left class="mr-2 mb-2">{{ selectedDevice.on ?
               mdiAccessPointCheck : mdiAccessPointOff
-              }}</v-icon>
+            }}</v-icon>
           </div>
         </div>
       </div>
@@ -415,13 +429,14 @@ import baseParametersMixin from '@/mixins/baseParametersMixin';
 import axios from 'axios';
 import FeederDevice from '@/components/FeederDevice.vue';
 import CameraDevice from '@/components/CameraDevice.vue';
+import EggCameraDevice from '@/components/EggCameraDevice.vue';
 import { deviceEnums } from '@/utils/deviceEnums';
 
 export default {
   mixins: [baseParametersMixin],
   name: 'DevicesView',
   components: {
-    FeederDevice, CameraDevice
+    FeederDevice, CameraDevice, EggCameraDevice
   },
   data() {
     return {
@@ -457,7 +472,7 @@ export default {
         // Example devices
         { mac: '00:16:17:e1:28:3f', pair: 2, type: 1, name: 'Krmitko', on: true, last_com: 4, fw: 11, com: 30, sleep: 50 },
         { mac: '00:16:17:e1:28:3f', pair: 2, type: 2, name: 'Krmitko', on: true, last_com: 4, fw: 11, com: 30, sleep: 50 },
-
+        { mac: '00:16:17:e1:27:3f', pair: 2, type: 3, name: 'Vejce', on: true, last_com: 4, fw: 11, com: 30, sleep: 50 },
         // { mac: '00:16:17:e1:28:3f', pair: 2, type: 1, name: 'Krmitko', on: false },
         // { mac: '00:16:17:e1:28:6f', pair: 1, type: 1, name: 'Krmitko', on: false },
         // { mac: '00:16:17:e1:28:5f', pair: 0, type: 1, name: 'Krmitko', on: false },
@@ -513,6 +528,7 @@ export default {
       const componentMap = {
         1: 'FeederDevice',
         2: 'CameraDevice',
+        3: 'EggCameraDevice',
       };
       return componentMap[this.selectedDevice.type] || null;
     },
@@ -558,7 +574,7 @@ export default {
 
             if (!this.devDrawer) {
               this.devices.forEach((device, index) => {
-                if (device.type == 2) {
+                if (device.type == 2 || device.type == 3) {
                   this.fetchCameraTimestamp(index); // Fetch timestamp for each camera
                 }
               });
